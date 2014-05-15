@@ -25,5 +25,7 @@ pollutantmean <- function(directory,pollutant,id=1:332){
                 myColName<-colnames(allPollutantData)[i]
                 assign(myColName,is.na(allPollutantData[[myColName]]))
         }
-        allPollutantData
+        pollutantmean<-signif(mean(allPollutantData[[pollutant]],na.rm=TRUE),4)
+        pollutantmean
+        #allPollutantData
 }
